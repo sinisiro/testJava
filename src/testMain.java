@@ -1,11 +1,13 @@
 import lib.DoubleLinkedList;
+import lib.MyHash;
 import lib.SingleLinkedList;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.HashMap;
 
 
-public class linkedList {
+public class testMain {
 
     public static void main(String[] args) {
         // 싱글 링크드 리스트
@@ -39,7 +41,26 @@ public class linkedList {
                 Collections.swap(dataList, index, index + 1);
             }
         }
-        System.out.println(dataList);
+//        System.out.println(dataList);
+
+        //Hash
+        MyHash mainObject = new MyHash(20);
+        mainObject.saveData("DaveLee", "01022223333");
+        mainObject.saveData("fun-coding", "01033334444");
+        mainObject.saveData("David", "01044445555");
+        mainObject.saveData("Dave", "01055556666");
+
+        System.out.println(mainObject.getData("David"));
+
+        HashMap<Integer, String> map1 = new HashMap();
+        map1.put(1, "사과");
+        map1.put(2, "바나나");
+        map1.put(3, "포도");
+
+        HashMap<String, String> map2 = new HashMap();
+        map2.put("DaveLee", "01033334444");
+        map2.put("Dave", "01032221111");
+        map2.put("David", "0104445555");
 
     }
 }
