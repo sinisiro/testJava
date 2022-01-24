@@ -3,6 +3,9 @@ import lib.*;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
+import java.util.Stack;
+
+import static lib.Merge_Sort.merge_sort;
 
 public class testMain {
 
@@ -35,10 +38,32 @@ public class testMain {
             testData.add((int)(Math.random() * 2));
         }
 
+
+//        ArrayList<Integer> resultData   = mergeSort.mergeSplitFunc(testData);
+//        System.out.println(resultData);
+
+        int [] test = new int[4];
+        test[0]=4;
+        test[1]=2;
+        test[2]=3;
+        test[3]=1;
+
+        merge_sort(test);
+
+
+        //배열 선언.
+        Integer [] testArray = new Integer[10];
+        testArray[0] =  1;
+
+
+        //스택
+        Stack stack  =  new Stack();
+        stack.push("1");
+//        System.out.println(stack.pop());
+
+
 //        System.out.println(testData);
 
-        ArrayList<Integer> resultData   = mergeSort.mergeSplitFunc(testData);
-        System.out.println(resultData);
 
 
         //non-static method cannot be referenced from a static context
