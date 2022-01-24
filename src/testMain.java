@@ -27,11 +27,25 @@ public class testMain {
 
     public static void main(String[] args) {
 
+        MergeSort mergeSort = new MergeSort();
+
+        ArrayList<Integer> testData = new ArrayList<Integer>();
+
+        for (int index = 0; index < 2; index++) {
+            testData.add((int)(Math.random() * 2));
+        }
+
+//        System.out.println(testData);
+
+        ArrayList<Integer> resultData   = mergeSort.mergeSplitFunc(testData);
+        System.out.println(resultData);
+
+
         //non-static method cannot be referenced from a static context
         //static 내에서 함수호출시 그 객체를만들어줘야함
         if(true) {
-            testMain test = new testMain();
-            test.testHeap();
+//            testMain test = new testMain();
+//            test.testHeap();
         }
         else {
             // 싱글 링크드 리스트
