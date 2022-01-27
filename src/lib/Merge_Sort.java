@@ -2,6 +2,7 @@ package lib;
 
 import java.util.Arrays;
 
+//재귀 아닌 방식
 public class Merge_Sort {
 
     private static int[] sorted;		// 합치는 과정에서 정렬하여 원소를 담을 임시배열

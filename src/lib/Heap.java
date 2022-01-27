@@ -3,6 +3,10 @@ package lib;
 import java.util.ArrayList;
 import java.util.Collections;
 
+/**
+ * 힙: 데이터에서 최대값과 최소값을 빠르게 찾기 위해 고안된 완전 이진 트리(Complete Binary Tree)
+ * 완전 이진 트리: 노드를 삽입할 때 최하단 왼쪽 노드부터 차례대로 삽입하는 트리
+ */
 public class Heap {
     public ArrayList<Integer> heapArray;
 

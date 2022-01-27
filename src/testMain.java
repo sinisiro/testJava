@@ -1,5 +1,8 @@
+import Search.BinarySearch;
+import Search.SequencialSearch;
 import lib.*;
 
+import java.sql.Array;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.HashMap;
@@ -9,7 +12,7 @@ import static lib.Merge_Sort.merge_sort;
 
 public class testMain {
 
-
+    //Heap
     public void testHeap(){
         //Heap
         Heap heapTest = new Heap(15);
@@ -30,13 +33,16 @@ public class testMain {
 
     public static void main(String[] args) {
 
-        MergeSort mergeSort = new MergeSort();
+        testGraph testGraph = new testGraph();
+        testGraph.execute();
+/*
+        //21. 이진탐색
+        BinarySearch binarySearch = new BinarySearch();
+        Collections.sort(testData);     //이진 탐색은 정렬이 되어있어야함.
+        System.out.println(testData);
+        boolean find = binarySearch.searchFunc(testData,5);
+        System.out.println("find?:"+find);
 
-        ArrayList<Integer> testData = new ArrayList<Integer>();
-
-        for (int index = 0; index < 2; index++) {
-            testData.add((int)(Math.random() * 2));
-        }
 
 
 //        ArrayList<Integer> resultData   = mergeSort.mergeSplitFunc(testData);
@@ -48,13 +54,12 @@ public class testMain {
         test[2]=3;
         test[3]=1;
 
-        merge_sort(test);
 
+//-------------------------------------------------------------------------------------------//
 
         //배열 선언.
         Integer [] testArray = new Integer[10];
         testArray[0] =  1;
-
 
         //스택
         Stack stack  =  new Stack();
@@ -65,6 +70,24 @@ public class testMain {
 //        System.out.println(testData);
 
 
+
+//        SortTest sortTest = new SortTest();
+//        sortTest.bubbleTest();
+
+        Integer test2 = 1;
+//        System.out.println(test2.getClass().getName());
+
+
+        RecursiveCall recursiveCall = new RecursiveCall();
+//        System.out.println(recursiveCall.factorialFunc(4));
+        
+        ArrayList<Integer> selectionDataList = makeData();
+        SelectionSort selectionSort = new SelectionSort();
+        selectionSort.test(selectionDataList);
+        
+
+//        BubbleSort bubbleSort = new BubbleSort();
+//        bubbleSort.bubbleTest();
 
         //non-static method cannot be referenced from a static context
         //static 내에서 함수호출시 그 객체를만들어줘야함
@@ -135,7 +158,17 @@ public class testMain {
 
             Node findNode = myTree.search(3);
             System.out.println(findNode.getValue());
+
+
+        }*/
+    }
+
+    private static ArrayList<Integer> makeData() {
+        ArrayList<Integer> testData = new ArrayList<Integer>();
+        for (int i = 0; i < 5; i++) {
+            testData.add((int)(Math.random() * 100));
         }
+        return testData;
     }
 
 
