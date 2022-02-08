@@ -32,9 +32,13 @@ public class testMain {
     }
 
     public static void main(String[] args) {
+//        testKruskal test = new testKruskal();
+//        testDijkstra test = new testDijkstra();
+        testBack test = new testBack();
+        test.execute();
 
-        testGraph testGraph = new testGraph();
-        testGraph.execute();
+//        testGraph testGraph = new testGraph();
+//        testGraph.execute();
 /*
         //21. 이진탐색
         BinarySearch binarySearch = new BinarySearch();
